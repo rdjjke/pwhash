@@ -11,28 +11,24 @@ func TestCrypt(t *testing.T) {
 		{
 			"$5$saltstring",
 			"Hello world!",
-			"$5$saltstring$5B8vYYiY.CVt1RlTTf8KbXBH3hsxY/G" +
-				"NooZaBBGWEc5",
+			"$5$saltstring$5B8vYYiY.CVt1RlTTf8KbXBH3hsxY/GNooZaBBGWEc5",
 		},
 		{
-			"$5$rounds=10000$saltstringsaltstring",
+			"$5$rounds=10000$saltstringsaltstringsaltstring",
 			"Hello world!",
-			"$5$rounds=10000$saltstringsaltst$3xv.VbSHBb41" +
-				"AL9AvLeujZkZRBAwqFMz2.opqey6IcA",
+			"$5$rounds=10000$saltstringsaltstring$Fu1kRGa0O4kxXevKoylx5kPJR11dRmYCWARsBUDSng/",
 		},
 		{
-			"$5$rounds=5000$toolongsaltstring",
+			"$5$rounds=5000$toolongsaltstringblahblah",
 			"This is just a test",
-			"$5$rounds=5000$toolongsaltstrin$Un/5jzAHMgOGZ" +
-				"5.mWJpuVolil07guHPvOW8mGRcvxa5",
+			"$5$rounds=5000$toolongsaltstringbla$V/DQQNnhtXNNe2BJVWZbqPw2iyxnwEikOfUSmgAf5J6",
 		},
 		{
-			"$5$rounds=1400$anotherlongsaltstring",
+			"$5$rounds=1400$anotherlongsaltstringblahblah",
 			"a very much longer text to encrypt.  " +
 				"This one even stretches over more" +
 				"than one line.",
-			"$5$rounds=1400$anotherlongsalts$Rx.j8H.h8HjED" +
-				"GomFU8bDkXm3XIUnzyxf12oP84Bnq1",
+			"$5$rounds=1400$anotherlongsaltstrin$7Hrr8RUkDOiE8TzpSsR.HpFepNwRQBOMuTQxm.mrMxB",
 		},
 		{
 			"$5$rounds=77777$short",

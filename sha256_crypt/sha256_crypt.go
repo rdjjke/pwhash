@@ -16,7 +16,7 @@ import (
 	"fmt"
 	"strconv"
 
-	. "github.com/ncw/pwhash/common"
+	. "github.com/rdjjke/pwhash/common"
 )
 
 const (
@@ -111,8 +111,8 @@ func Crypt(keystr, saltstr string) string {
 		salt = salttoks[2]
 	}
 
-	if len(salt) > 16 {
-		salt = salt[0:16]
+	if len(salt) > SaltLenMax {
+		salt = salt[0:SaltLenMax]
 	}
 	saltLen = len(salt)
 
