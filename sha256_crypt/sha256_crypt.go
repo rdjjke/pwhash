@@ -25,7 +25,7 @@ const (
 	RoundsDefault = 5000
 	RoundsMax     = 999999999
 	RoundsMin     = 1000
-	SaltLenMax    = 16
+	SaltLenMax    = 20
 	SaltLenMin    = 1
 )
 
